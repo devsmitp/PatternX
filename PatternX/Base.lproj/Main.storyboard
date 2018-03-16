@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PatternX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4YC-fs-z4P" userLabel="Pick Image">
+                                <rect key="frame" x="8" y="616" width="359" height="40"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tPg-lT-uer"/>
+                                </constraints>
+                                <state key="normal" title="Choose From Library">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseImageFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yZT-EA-djh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLK-X0-vNQ" userLabel="Take Photo">
+                                <rect key="frame" x="8" y="486" width="359" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9H2-8L-bCo"/>
+                                </constraints>
+                                <state key="normal" image="camera"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFf-TW-JSa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNA-G6-dMI" userLabel="Lbl Result">
+                                <rect key="frame" x="20" y="319.5" width="335" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpO-5x-3jd" userLabel="TakePhotolbl">
+                                <rect key="frame" x="8" y="465" width="359" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="X5l-q9-iab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nature" translatesAutoresizingMaskIntoConstraints="NO" id="wmq-wV-zIb" userLabel="My Photo">
+                                <rect key="frame" x="0.0" y="15" width="375" height="273"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="273" id="FyF-Vh-qfJ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.52171009779999999" green="0.81504839659999995" blue="0.5285595059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bLK-X0-vNQ" firstAttribute="top" secondItem="kpO-5x-3jd" secondAttribute="bottom" constant="1" id="8N3-gS-hq2"/>
+                            <constraint firstItem="wmq-wV-zIb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BAd-E9-rSM"/>
+                            <constraint firstItem="bLK-X0-vNQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="BXI-Or-yCa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4YC-fs-z4P" secondAttribute="trailing" constant="8" id="CMc-Lm-FUH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bLK-X0-vNQ" secondAttribute="trailing" constant="8" id="Ftb-IX-YTa"/>
+                            <constraint firstItem="kpO-5x-3jd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Ggx-WV-ViU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kpO-5x-3jd" secondAttribute="trailing" constant="8" id="M6t-OM-QQH"/>
+                            <constraint firstItem="pNA-G6-dMI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ZEe-ls-gDa"/>
+                            <constraint firstItem="pNA-G6-dMI" firstAttribute="top" secondItem="wmq-wV-zIb" secondAttribute="bottom" constant="31.5" id="dXR-Zl-ElB"/>
+                            <constraint firstItem="wmq-wV-zIb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-5" id="dfk-zX-f0k"/>
+                            <constraint firstItem="wmq-wV-zIb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eKx-hh-rnq"/>
+                            <constraint firstItem="kpO-5x-3jd" firstAttribute="top" secondItem="pNA-G6-dMI" secondAttribute="bottom" constant="126" id="jkH-Xj-v1x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4YC-fs-z4P" secondAttribute="bottom" constant="11" id="kTO-u6-krY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pNA-G6-dMI" secondAttribute="trailing" constant="20" id="le7-R3-HO8"/>
+                            <constraint firstItem="4YC-fs-z4P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="uuQ-L2-QDm"/>
+                            <constraint firstItem="4YC-fs-z4P" firstAttribute="top" secondItem="bLK-X0-vNQ" secondAttribute="bottom" constant="90" id="zOH-9b-mf9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ResultLbl" destination="pNA-G6-dMI" id="utQ-zF-RxT"/>
+                        <outlet property="photoView" destination="wmq-wV-zIb" id="qzu-FQ-sIw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="583.20000000000005" y="156.07196401799101"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera" width="49" height="37"/>
+        <image name="nature" width="4896" height="3264"/>
+    </resources>
+</document>
